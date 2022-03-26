@@ -6,6 +6,7 @@ import {
   getShowOrMovieDetail,
 } from "../../features/movies/movieSlice";
 import { removeSelectedMovieOrShow } from "../../features/movies/movieSlice";
+import Spinner from "../../images/SpinnerGif.gif";
 import "./MovieDetails.scss";
 
 const MovieDetails = () => {
@@ -22,7 +23,9 @@ const MovieDetails = () => {
   return (
     <div className="movie-section">
       {Object.keys(data).length === 0 ? (
-        <div>Loading...</div>
+        <div className="spinner">
+          <img src={Spinner} alt="spinner" />
+        </div>
       ) : (
         <>
           <div className="section-left">

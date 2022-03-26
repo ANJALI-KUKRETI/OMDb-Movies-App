@@ -3,6 +3,7 @@
 .movie-section {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   padding: 40px 0px;
   color: $font-primary;
   font-weight: 400;
@@ -52,5 +53,20 @@
   color: peachpuff;
 }
 .section-right {
-  margin-left: 30px;
+  margin: 30px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 4rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .movie-section {
+    flex-direction: column-reverse;
+  }
 }
